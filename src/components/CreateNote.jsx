@@ -15,13 +15,16 @@ function CreateNote({ onNoteCreated }) {
     }
 
     try {
-      const response = await fetch("http://localhost:8080/api/notes", {
-        method: "POST",
-        headers: {
-          "content-Type": "application/json",
-        },
-        body: JSON.stringify({ title, content, category }),
-      });
+      const response = await fetch(
+        "https://backend-notes-by0u.onrender.com/api/notes",
+        {
+          method: "POST",
+          headers: {
+            "content-Type": "application/json",
+          },
+          body: JSON.stringify({ title, content, category }),
+        }
+      );
 
       if (!response.ok) throw new Error("Error al crear la nota");
 

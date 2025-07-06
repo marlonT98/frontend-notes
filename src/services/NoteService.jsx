@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8080/api/notes";
+const API_BASE_URL = "https://backend-notes-by0u.onrender.com/api/notes";
 
 export const NoteService = {
   getActiveNotes: async () => {
